@@ -14,13 +14,13 @@
 [crossbeam-channel](https://github.com/crossbeam-rs/crossbeam-channel). スレッドセーフなMPMCキュー実装. GoのchannelとJavaのjava.util.concurrentをよく調査して実装されている.
 詳細は [RFCs](https://github.com/crossbeam-rs/rfcs/blob/master/text/2017-11-09-channel.md) をみるのが一番いい.
 
-## Nim
+### Nim
 
 ChannelはスレッドセーフなMPMCキュー実装で, こちらもGoから大きく影響が見受けられている感じがしている.
 
 ## メールボックス派
 
-## D
+### D
 
 標準ライブラリの[std.concurrnecy](https://dlang.org/phobos/std_concurrency.html). スレッドごとにMPSCキューを持つ.
 キューは連結リストで実装され動的にサイズを変更可能(unbounded Linked-lsit MPSC Queue).
