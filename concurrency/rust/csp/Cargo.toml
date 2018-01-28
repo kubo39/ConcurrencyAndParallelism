@@ -1,0 +1,8 @@
+[package]
+name = "csp"
+version = "0.1.0"
+authors = ["Hiroki Noda <kubo39@gmail.com>"]
+
+[dependencies]
+crossbeam = "0.3.2"
+crossbeam-channel = "0.1"
