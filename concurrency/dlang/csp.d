@@ -1,3 +1,4 @@
+import core.thread : thread_joinAll;
 import std.concurrency;
 import std.stdio;
 
@@ -8,7 +9,6 @@ void main()
     auto receiver = spawn(() {
             foreach (_; 0 .. 5)
                 writeln(receiveOnly!string);
-            ownerTid.send(true);
         });
 
     foreach (name; people)
@@ -18,5 +18,5 @@ void main()
             }, receiver, name);
     }
 
-    assert(receiveOnly!bool);
+    thread_joinAll;
 }
